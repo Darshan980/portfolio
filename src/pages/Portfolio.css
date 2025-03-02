@@ -1,0 +1,19 @@
+/* Portfolio Page Styles */
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 16px;
+  text-align: center;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.portfolio-description {
+  font-size: 1.125rem;
+  margin-bottom: 48px;
+  color: #555;
+}

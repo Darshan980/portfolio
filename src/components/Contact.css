@@ -1,0 +1,310 @@
+/* Contact Section */
+#contact {
+  padding: 5vw 10%;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Animation */
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.5) 0%, transparent 70%);
+  z-index: 1;
+}
+
+/* Section Header */
+.contact-header {
+  margin-bottom: 3vw;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #0d47a1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+}
+
+.contact-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background: #1976d2;
+  border-radius: 2px;
+}
+
+.contact-header p {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.divider {
+  width: 6rem;
+  height: 0.35rem;
+  background: linear-gradient(90deg, #1565c0, #42a5f5);
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Contact Content */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Info & Form */
+.info-box, .form-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.07);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.info-box:hover, .form-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.info-box h3, .form-box h3 {
+  font-size: clamp(1.5rem, 2vw, 1.7rem);
+  margin-bottom: 1.5rem;
+  color: #0d47a1;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.info-box h3::after, .form-box h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #1976d2, #64b5f6);
+  border-radius: 2px;
+}
+
+.info-box p {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.info-box p:hover {
+  transform: translateX(5px);
+  color: #1976d2;
+}
+
+.info-box p strong {
+  margin-right: 0.5rem;
+  color: #0d47a1;
+  min-width: 80px;
+  display: inline-block;
+}
+
+/* Form */
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.input-field, .textarea-field {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid #cfdff5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: #f8faff;
+}
+
+.input-field:focus, .textarea-field:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+  outline: none;
+  background-color: #fff;
+}
+
+.form-group:focus-within label {
+  color: #1976d2;
+}
+
+/* Input field hover effect */
+.input-field:hover, .textarea-field:hover {
+  border-color: #90caf9;
+  background-color: #fafcff;
+}
+
+/* Textarea */
+.textarea-field {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  background: linear-gradient(45deg, #1565c0, #42a5f5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #42a5f5, #1565c0);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 67, 156, 0.2);
+}
+
+.submit-btn:hover::before {
+  left: 0;
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 67, 156, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Alert Message */
+.alert {
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: fadeInUp 0.4s ease-out;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #4caf50;
+}
+
+.alert.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left: 4px solid #f44336;
+}
+
+/* Loading Animation */
+@keyframes sending {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.submit-btn:disabled {
+  background: linear-gradient(270deg, #1976d2, #42a5f5, #64b5f6, #42a5f5, #1976d2);
+  background-size: 300% 300%;
+  animation: sending 2s ease infinite;
+}

@@ -1,0 +1,121 @@
+/* 🔹 Skills Section - Matching About & Responsive */
+.skills-section {
+  padding: 100px 10%;  /* Adjusted to match About Section */
+  background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+  text-align: center;
+}
+
+/* 🔹 Section Header */
+.skills-header {
+  margin-bottom: 50px;
+}
+
+.skills-header h2 {
+  font-size: 2.8rem; /* Slightly increased to match About */
+  font-weight: bold;
+  color: #0D47A1;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Divider - Matching About */
+.skills-header .divider {
+  width: 100px;  /* Matched with About Section */
+  height: 5px;
+  background: linear-gradient(90deg, #1565c0, #42a5f5);
+  margin: 10px auto 0;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* 🔹 Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%; /* Uses full width based on padding */
+  max-width: 1200px; /* Slightly expanded */
+  margin: 0 auto;
+}
+
+/* 🔹 Skill Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* 🔄 Light Blue Hover Effect on Skill Card */
+.skill-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(187, 222, 251, 0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Skill Card Title */
+.skill-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0D47A1;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Skill Tags */
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: rgba(13, 71, 161, 0.12);
+  color: #0D47A1;
+  padding: 7px 12px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔄 Light Blue Hover Effect on Skill Tags */
+.skill-tag:hover {
+  background: rgba(187, 222, 251, 0.6);
+  color: #0D47A1;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(13, 71, 161, 0.15);
+}
+
+/* 🔹 Media Queries for Better Responsiveness */
+@media (max-width: 768px) {
+  .skills-header h2 {
+      font-size: 2.4rem;
+  }
+
+  .skills-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+      padding: 25px;
+  }
+}
+
+/* 🔄 Fade-In Animation for Section Header */
+.skills-header h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

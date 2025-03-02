@@ -1,0 +1,87 @@
+
+/* Footer Styles */
+.footer {
+  background-color: #1a202c;
+  color: #d1d5db;
+  padding: 5px 0; /* Remove side padding */
+  text-align: center;
+  width: 100vw; /* Full viewport width */
+}
+
+/* Footer Container */
+.footer-container {
+  width: 100%; /* Full width */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo & Copyright */
+.footer-logo h2 {
+  font-size: 1rem; /* Compact size */
+  font-weight: bold;
+  color: white;
+}
+
+.footer-logo span {
+  color: #3b82f6;
+}
+
+.footer-text {
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+
+/* Navigation Links */
+.footer-links {
+  display: flex;
+  gap: 5px; /* Minimal spacing */
+  margin-top: 3px;
+}
+
+.footer-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #3b82f6;
+}
+
+/* Social Media Icons */
+.footer-social {
+  display: flex;
+  gap: 5px;
+  margin-top: 3px;
+}
+
+.footer-social img {
+  width: 16px; /* Smaller icons */
+  height: 16px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer-social img:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    text-align: left;
+    padding: 0 10%; /* Add padding for larger screens */
+  }
+
+  .footer-links {
+    margin-top: 0;
+  }
+
+  .footer-social {
+    margin-top: 0;
+  }
+}

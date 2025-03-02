@@ -1,0 +1,65 @@
+/* Resume Page Styles */
+
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+  }
+  
+  .resume-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .resume-section {
+    margin-bottom: 48px;
+  }
+  
+  .resume-section-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .resume-item {
+    margin-bottom: 24px;
+  }
+  
+  .resume-item-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .resume-item-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+  
+  .resume-item-description {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  /* Resume Download Button */
+  .resume-download {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resume-download:hover {
+    background-color: #0056b3;
+  }
+  

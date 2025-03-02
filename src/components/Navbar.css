@@ -1,0 +1,208 @@
+/* ===== Navbar Base Styles ===== */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: transparent;
+  transition: all 0.4s ease-in-out;
+  padding: 1.2rem 0;
+  opacity: 0;
+  transform: translateY(-30px) scale(0.95);
+  animation: popIn 0.8s ease-out forwards;
+}
+
+/* === Navbar Pop-in Animation === */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== Navbar Scroll Effect (Gradient & Blur) ===== */
+.navbar.scrolled {
+  background: linear-gradient(to right, rgba(37, 99, 235, 0.8), rgba(99, 102, 241, 0.8));
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 0;
+  transform: translateY(0);
+}
+
+/* ===== Navbar Container ===== */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Logo Styling ===== */
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* === Glowing Hover Effect === */
+.navbar-logo:hover {
+  color: #ffcc00;
+  text-shadow: 0px 0px 10px #ffcc00;
+  transform: scale(1.08);
+}
+
+/* ===== Navigation Links (Desktop) ===== */
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* === Underline Neon Glow Effect === */
+.navbar-menu a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffcc00;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu a.active::after {
+  transform: scaleX(1);
+  box-shadow: 0 0 8px #ffcc00;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+  color: #ffcc00;
+  font-weight: 600;
+  transform: scale(1.05);
+}
+
+/* ===== Animated Button Click (Ripple Effect) ===== */
+.navbar-menu a:active {
+  animation: ripple 0.4s ease-out;
+}
+
+/* === Ripple Effect Animation === */
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ===== Hamburger Menu Button (Cool Morphing) ===== */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggle.open {
+  transform: rotate(90deg);
+}
+
+/* === Hamburger Morphs into "X" === */
+.navbar-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 6px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== Mobile Menu (Slide-in with Blur) ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  box-shadow: -4px 0 10px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: right 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+/* === Mobile Menu Links (Glowing Hover) === */
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 0;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.mobile-menu a:hover {
+  color: #ffcc00;
+  text-shadow: 0px 0px 12px #ffcc00;
+  transform: translateX(5px);
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
