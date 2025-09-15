@@ -26,7 +26,7 @@ function About() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <img 
-            src="../public/profile_picture.jpg" 
+            src="/profile_picture.jpg" 
             alt="Profile picture" 
             className="about-image"
           />
