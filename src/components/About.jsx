@@ -37,17 +37,16 @@ function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h3>Frontend Developer & UI/UX Designer based in San Francisco</h3>
+          <h3>Machine Learning Engineer & Web Developer</h3>
           <p>
-            I'm passionate about creating beautiful, functional, and user-centered digital experiences. 
-            With 5+ years of experience, I've worked on projects ranging from small business websites to complex web applications.
+           I’m passionate about building intelligent, functional, and user-friendly applications. Over the past year, I’ve worked on projects ranging from web development to machine learning, constantly learning new tools and improving my skills.
           </p>
 
           {/* Stats Section */}
           <div className="about-stats">
-            <span className="about-stat">20+ Projects Completed</span>
-            <span className="about-stat">5+ Years of Experience</span>
-            <span className="about-stat">15+ Happy Clients</span>
+            <span className="about-stat">9+ Projects Completed</span>
+            <span className="about-stat">1+ Years of Experience</span>
+            <span className="about-stat">Always Learning & Exploring</span>
           </div>
 
           {/* Resume Button */}
