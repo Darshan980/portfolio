@@ -1,29 +1,31 @@
 const projectsData = [
-    {
-      id: 1,
-      title: "E-commerce Website",
-      category: "web",
-      description: "A fully responsive e-commerce site built with React, Redux, and Stripe.",
-      image: "/images/ecommerce.png",
-      link: "https://example.com/ecommerce",
-    },
-    {
-      id: 2,
-      title: "Mobile Banking App",
-      category: "mobile",
-      description: "A secure banking app with biometric authentication, built using React Native.",
-      image: "/images/banking.png",
-      link: "https://example.com/banking",
-    },
-    {
-      id: 3,
-      title: "Portfolio Website",
-      category: "web",
-      description: "A sleek personal portfolio built with Next.js and Tailwind CSS.",
-      image: "/images/portfolio.png",
-      link: "https://example.com/portfolio",
-    },
-  ];
-  
-  export default projectsData;
-  
+  {
+    id: 1,
+    title: "Instagram Clone",
+    category: "web",
+    description: "A full-stack social media app with user authentication, image uploads, likes, comments, and real-time messaging built with MERN stack.",
+    image: "/images/instagram-clone.png",
+    link: "https://github.com/yourusername/instagram-clone",
+    technologies: ["React", "Node.js", "MongoDB", "Next.js", "Socket.io", "Cloudinary"]
+  },
+  {
+    id: 2,
+    title: "Accident Detection System",
+    category: "ai",
+    description: "AI-powered computer vision system for detecting traffic accidents using deep learning with custom CNN and transfer learning models.",
+    image: "/images/accident-detection.png",
+    link: "https://github.com/yourusername/accident-detection",
+    technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "CNN", "Transfer Learning"]
+  },
+  {
+    id: 3,
+    title: "Portfolio Website",
+    category: "web",
+    description: "A modern, responsive personal portfolio showcasing projects and skills, built with Next.js and styled with Tailwind CSS.",
+    image: "/images/portfolio.png",
+    link: "https://yourportfolio.vercel.app",
+    technologies: [ "React", "CSS", "Vercel"]
+  },
+];
+
+export default projectsData;
