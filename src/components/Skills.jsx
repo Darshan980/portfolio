@@ -4,9 +4,9 @@ import skillVariants from '../variants/skillVariants';
 import './Skills.css';
 
 const skillsData = [
-  { category: "Frontend Development", items: ["HTML5", "CSS3/SASS", "JavaScript (ES6+)", "TypeScript", "React", "Vue.js", "Next.js"] },
-  { category: "UI/UX Design", items: ["Figma", "Adobe XD", "User Research", "Wireframing", "Prototyping", "Responsive Design"] },
-  { category: "Tools & Technologies", items: ["Git", "Webpack", "Redux", "TailwindCSS", "Framer Motion", "Three.js", "GraphQL"] },
+  { category: "Frontend Development", items: ["HTML5", "CSS3/SASS", "JavaScript (ES6+)", "Java", "React", "Next.js"] },
+  { category: "Machine Learning", items: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Data Visualization"] },
+  { category: "Tools & Technologies", items: ["Git", "Vs Code", "Render", "Vercel", "webpack", "Github", "Jupyter Notebook"] },
   { category: "Soft Skills", items: ["Problem Solving", "Communication", "Team Collaboration", "Time Management", "Adaptability"] }
 ];
 
