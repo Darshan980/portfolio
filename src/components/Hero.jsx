@@ -24,7 +24,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-        Python Developer | Full-Stack Developer
+        Machine Learning Engineer | Full-Stack Developer
 
         </motion.h2>
 
