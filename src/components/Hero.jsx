@@ -15,7 +15,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Hi, I'm <span>John Doe</span>
+          Hi, I'm <span>Darshan S</span>
         </motion.h1>
 
         <motion.h2
@@ -24,7 +24,8 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Frontend Developer & UI/UX Designer
+        Python Developer | Full-Stack Developer
+
         </motion.h2>
 
         <motion.p
@@ -33,8 +34,8 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          I build stunning, interactive web experiences with modern technologies.
-          Let's bring your vision to life.
+          I work with Python to build web applications and explore machine learning.  
+   Always learning new tools and improving my skills in development and data science.
         </motion.p>
 
         <motion.div
