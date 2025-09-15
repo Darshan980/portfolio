@@ -16,7 +16,6 @@ function About() {
           <div className="about-divider"></div>
         </motion.div>
       </div>
-
       <div className="about-container">
         {/* Profile Image */}
         <motion.div
@@ -26,9 +25,12 @@ function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="about-image"></div> {/* Using background-image */}
+          <img 
+            src="../public/profile_picture.jpg" 
+            alt="Profile picture" 
+            className="about-image"
+          />
         </motion.div>
-
         {/* About Text */}
         <motion.div
           className="about-text"
@@ -39,16 +41,14 @@ function About() {
         >
           <h3>Machine Learning Engineer & Web Developer</h3>
           <p>
-           I’m passionate about building intelligent, functional, and user-friendly applications. Over the past year, I’ve worked on projects ranging from web development to machine learning, constantly learning new tools and improving my skills.
+           I'm passionate about building intelligent, functional, and user-friendly applications. Over the past year, I've worked on projects ranging from web development to machine learning, constantly learning new tools and improving my skills.
           </p>
-
           {/* Stats Section */}
           <div className="about-stats">
             <span className="about-stat">9+ Projects Completed</span>
             <span className="about-stat">1+ Years of Experience</span>
             <span className="about-stat">Always Learning & Exploring</span>
           </div>
-
           {/* Resume Button */}
           <a href="/resume" className="about-button">
             Download Resume
