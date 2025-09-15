@@ -34,7 +34,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          I work with Python to build web applications and explore machine learning.  
+          I build web applications and predictive models using Python.  
    Always learning new tools and improving my skills in development and data science.
         </motion.p>
 
