@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard'; // Component for each project
 import projectsData from './ProjectsData'; // Data file for projects
-
 import './Project.css'; // Importing CSS file
 
 function Projects({ showAll = false }) {
@@ -52,9 +52,9 @@ function Projects({ showAll = false }) {
 
         {!showAll && (
           <div className="view-more">
-            <a href="/project" className="btn">
+            <Link to="/project" className="btn">
               View All Projects
-            </a>
+            </Link>
           </div>
         )}
       </div>
