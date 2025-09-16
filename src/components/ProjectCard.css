@@ -1,11 +1,10 @@
-/* ProjectCard.css */
 .project-card {
-  background: #e6f0ff; /* light blue to match skills section */
+  background: #e6f0ff;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 320px;
+  width: 320px;        /* fixed card width */
   margin: 16px;
   text-align: center;
 }
@@ -15,12 +14,17 @@
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* image container */
+/* image wrapper */
+.project-image-container {
+  width: 100%;
+  height: 180px;         /* keep all cards same height */
+  overflow: hidden;
+}
+
 .project-image {
   width: 100%;
-  height: 180px; /* fixed height container */
-  object-fit: cover; /* crop without distortion */
-  border-bottom: 1px solid #d0def5;
+  height: 100%;
+  object-fit: cover;     /* ensures image fills box without distortion */
 }
 
 .project-info {
