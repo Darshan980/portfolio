@@ -32,7 +32,7 @@ function Projects({ showAll = false }) {
 
         {!showAll && (
           <div className="filter-buttons">
-            {['all', 'web', 'mobile'].map((category) => (
+            {['all', 'Full_Stack', 'Machine_Learning'].map((category) => (
               <button
                 key={category}
                 onClick={() => setFilter(category)}
