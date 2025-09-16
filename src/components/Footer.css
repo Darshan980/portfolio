@@ -1,28 +1,32 @@
+/* Footer.css */
 
 /* Footer Styles */
 .footer {
   background-color: #1a202c;
   color: #d1d5db;
-  padding: 5px 0; /* Remove side padding */
-  text-align: center;
-  width: 100vw; /* Full viewport width */
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto;
 }
 
 /* Footer Container */
 .footer-container {
-  width: 100%; /* Full width */
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 15px;
 }
 
 /* Logo & Copyright */
 .footer-logo h2 {
-  font-size: 1rem; /* Compact size */
+  font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  margin: 0;
 }
 
 .footer-logo span {
@@ -30,58 +34,90 @@
 }
 
 .footer-text {
-  font-size: 0.7rem;
-  margin-top: 2px;
+  font-size: 0.875rem;
+  margin: 5px 0 0 0;
+  opacity: 0.8;
 }
 
 /* Navigation Links */
 .footer-links {
   display: flex;
-  gap: 5px; /* Minimal spacing */
-  margin-top: 3px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-links a {
   color: #d1d5db;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   transition: color 0.3s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 .footer-links a:hover {
   color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
 }
 
 /* Social Media Icons */
 .footer-social {
   display: flex;
-  gap: 5px;
-  margin-top: 3px;
+  gap: 15px;
+  align-items: center;
 }
 
-.footer-social img {
-  width: 16px; /* Smaller icons */
-  height: 16px;
-  transition: opacity 0.3s ease-in-out;
+.footer-social a {
+  color: #d1d5db;
+  transition: all 0.3s ease-in-out;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer-social img:hover {
-  opacity: 0.8;
+.footer-social a:hover {
+  color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
   .footer-container {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-logo {
     text-align: left;
-    padding: 0 10%; /* Add padding for larger screens */
   }
 
   .footer-links {
-    margin-top: 0;
+    gap: 30px;
   }
+}
 
-  .footer-social {
-    margin-top: 0;
+@media (max-width: 767px) {
+  .footer-container {
+    text-align: center;
+  }
+  
+  .footer-links {
+    gap: 15px;
+  }
+  
+  .footer-links a {
+    font-size: 0.8rem;
+    padding: 3px 8px;
   }
 }
