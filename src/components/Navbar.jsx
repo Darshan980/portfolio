@@ -30,10 +30,10 @@ function Navbar() {
             Home
           </Link>
           <Link
-            to="/portfolio"
-            className={location.pathname === "/portfolio" ? "active" : ""}
+            to="/projects"
+            className={location.pathname === "/projects" ? "active" : ""}
           >
-            Portfolio
+            Projects
           </Link>
           <Link
             to="/resume"
