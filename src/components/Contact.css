@@ -1,6 +1,6 @@
 /* Contact Section */
 #contact {
-  padding: 5vw 10%;
+  padding: 3vw 5%;
   background: linear-gradient(135deg, #e3f2fd, #bbdefb);
   text-align: center;
   position: relative;
@@ -21,13 +21,13 @@
 
 /* Section Header */
 .contact-header {
-  margin-bottom: 3vw;
+  margin-bottom: 2rem;
   position: relative;
   z-index: 2;
 }
 
 .contact-header h2 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 800;
   color: #0d47a1;
   text-transform: uppercase;
@@ -40,27 +40,27 @@
 .contact-header h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-  height: 4px;
+  height: 3px;
   background: #1976d2;
   border-radius: 2px;
 }
 
 .contact-header p {
-  margin-top: 2rem;
-  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
   color: #333;
   font-weight: 400;
 }
 
 .divider {
-  width: 6rem;
-  height: 0.35rem;
+  width: 5rem;
+  height: 0.3rem;
   background: linear-gradient(90deg, #1565c0, #42a5f5);
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
@@ -86,25 +86,28 @@
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   justify-content: center;
   align-items: stretch;
   position: relative;
   z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
   .contact-content {
     grid-template-columns: 1fr;
+    max-width: 500px;
   }
 }
 
 /* Contact Info & Form */
 .info-box, .form-box {
   background: rgba(255, 255, 255, 0.95);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.07);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(5px);
@@ -112,16 +115,16 @@
 }
 
 .info-box:hover, .form-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.07);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.07);
 }
 
 .info-box h3, .form-box h3 {
-  font-size: clamp(1.5rem, 2vw, 1.7rem);
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  margin-bottom: 1.2rem;
   color: #0d47a1;
   position: relative;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
 }
 
 .info-box h3::after, .form-box h3::after {
@@ -129,17 +132,17 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 60px;
+  width: 50px;
   height: 3px;
   background: linear-gradient(90deg, #1976d2, #64b5f6);
   border-radius: 2px;
 }
 
 .info-box p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #444;
-  margin: 1rem 0;
-  padding: 0.5rem 0;
+  margin: 0.8rem 0;
+  padding: 0.4rem 0;
   display: flex;
   align-items: center;
   transition: transform 0.2s ease;
@@ -153,7 +156,7 @@
 .info-box p strong {
   margin-right: 0.5rem;
   color: #0d47a1;
-  min-width: 80px;
+  min-width: 70px;
   display: inline-block;
 }
 
@@ -161,28 +164,29 @@
 .form-box form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .form-group {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   position: relative;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-weight: 500;
   color: #333;
   transition: color 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .input-field, .textarea-field {
   width: 100%;
-  padding: 14px 16px;
-  font-size: 1rem;
+  padding: 12px 14px;
+  font-size: 0.95rem;
   border: 1px solid #cfdff5;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: all 0.3s ease;
   box-sizing: border-box;
   background-color: #f8faff;
@@ -190,7 +194,7 @@
 
 .input-field:focus, .textarea-field:focus {
   border-color: #1976d2;
-  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15);
   outline: none;
   background-color: #fff;
 }
@@ -207,23 +211,23 @@
 
 /* Textarea */
 .textarea-field {
-  min-height: 150px;
+  min-height: 120px;
   resize: vertical;
 }
 
 /* Submit Button */
 .submit-btn {
-  padding: 14px 20px;
-  font-size: 1.1rem;
+  padding: 12px 18px;
+  font-size: 1rem;
   font-weight: 600;
   width: 100%;
   background: linear-gradient(45deg, #1565c0, #42a5f5);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 0.8rem;
+  margin-top: 0.6rem;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -242,8 +246,8 @@
 }
 
 .submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 14px rgba(0, 67, 156, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 67, 156, 0.2);
 }
 
 .submit-btn:hover::before {
@@ -252,7 +256,7 @@
 
 .submit-btn:active {
   transform: translateY(0);
-  box-shadow: 0 3px 8px rgba(0, 67, 156, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 67, 156, 0.3);
 }
 
 .submit-btn:disabled {
@@ -264,13 +268,14 @@
 
 /* Alert Message */
 .alert {
-  padding: 1rem;
-  margin-bottom: 1.2rem;
-  border-radius: 8px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
   font-weight: 500;
   animation: fadeInUp 0.4s ease-out;
   display: flex;
   align-items: center;
+  font-size: 0.9rem;
 }
 
 @keyframes fadeInUp {
