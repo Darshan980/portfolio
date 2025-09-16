@@ -35,15 +35,15 @@ const ContactInfo = () => {
       <h3>Contact Information</h3>
       <p>
         <span className="icon-wrapper"><PhoneIcon /></span>
-        <strong>Phone:</strong> +1 (555) 123-4567
+        <strong>Phone:</strong> +91 6361129065
       </p>
       <p>
         <span className="icon-wrapper"><EmailIcon /></span>
-        <strong>Email:</strong> hello@johndoe.com
+        <strong>Email:</strong> darshanpoojary980@gmail.com
       </p>
       <p>
         <span className="icon-wrapper"><LocationIcon /></span>
-        <strong>Location:</strong> San Francisco, CA
+        <strong>Location:</strong> Karnataka,India
       </p>
     </div>
   );
