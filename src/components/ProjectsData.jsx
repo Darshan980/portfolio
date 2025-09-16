@@ -51,7 +51,7 @@ const projectsData = [
   category: "Full_Stack",
   description: "A secure authentication system using Firebase with user registration, login, logout, email verification, password reset, and protected routes. Includes profile management, responsive UI, and real email delivery.",
   image: "/firebase-auth.png",
-  link: "https://your-firebase-auth-demo-link.com", // replace with your live demo link
+  link: "https://firebase-auth-app-sooty.vercel.app/",
   technologies: ["HTML5", "CSS3", "JavaScript", "Firebase"]
 },
    {
@@ -60,7 +60,7 @@ const projectsData = [
   category: "Frontend",
   description: "A simple weather application built with HTML, CSS, and JavaScript. Fetches real-time weather data from the OpenWeatherMap API and displays temperature, conditions, humidity, and wind speed. Features include error handling, responsive design, and a demo mode with mock data.",
   image: "/weather.png",
-  link: "https://darshan980.github.io/weather-app/", // replace with your live demo link
+  link: "https://darshan980.github.io/weather-app/", 
   technologies: ["HTML5", "CSS3", "JavaScript", "OpenWeatherMap API"]
 },
    {
@@ -69,7 +69,7 @@ const projectsData = [
   category: "Frontend",
   description: "A real-time cryptocurrency tracker built with React.js. Displays top 20 coins with live prices, 24h change, interactive charts, dark mode, search, and auto-refresh. Data sourced from the CoinGecko API with Chart.js visualizations.",
   image: "/crypto-tracker.png",
-  link: "https://your-crypto-tracker-demo-link.com", // replace with your live demo link
+  link: "https://project-crypto-price-tracker-app-s5.vercel.app/",
   technologies: ["React.js", "Chart.js", "Axios", "CoinGecko API", "CSS3"]
 }
 
