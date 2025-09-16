@@ -21,7 +21,7 @@ const projectsData = [
     id: 3,
     title: "Portfolio Website",
     category: "web",
-    description: "A modern, responsive personal portfolio showcasing projects and skills, built with Next.js and styled with Tailwind CSS.",
+    description: "A modern, responsive personal portfolio showcasing projects and skills, built with React.js and styled with  CSS.",
     image: "/protofolio.png",
     link: "https://yourportfolio.vercel.app",
     technologies: [ "React", "CSS", "Vercel"]
