@@ -2,7 +2,7 @@ import React from "react";
 import Projects from "../components/Projects";
 import "./Portfolio.css"; // Import styles
 
-function Projects() {
+function Project() {
   return (
     <section className="portfolio-container">
       <h1 className="portfolio-title">My Projects</h1>
@@ -14,4 +14,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Project;
