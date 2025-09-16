@@ -1,12 +1,36 @@
+/* Container for project cards - add this to your parent component */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Alternative flex layout if you prefer */
+.projects-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .project-card {
-  background: #e6f0ff; /* matches skills template */
+  background: #e6f0ff;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 320px;
-  margin: 16px;
+  width: 100%;
+  max-width: 320px;
+  min-width: 280px;
   text-align: center;
+  flex: 0 1 320px; /* for flex layout */
 }
 
 .project-card:hover {
