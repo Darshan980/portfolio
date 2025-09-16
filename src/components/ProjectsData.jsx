@@ -13,7 +13,7 @@ const projectsData = [
     title: "Accident Detection System",
     category: "ai",
     description: "AI-powered computer vision system for detecting traffic accidents using deep learning with custom CNN and transfer learning models.",
-    image: "/images/accident-detection.png",
+    image: "/Accident-detction.png",
     link: "https://github.com/yourusername/accident-detection",
     technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "CNN", "Transfer Learning"]
   },
