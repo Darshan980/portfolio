@@ -2,7 +2,7 @@ const projectsData = [
   {
     id: 1,
     title: "Instagram Clone",
-    category: "web",
+    category: "Full_Stack",
     description: "A full-stack social media app with user authentication, image uploads, likes, comments, and real-time messaging built with MERN stack.",
     image: "/instagramclone.png",
     link: "https://instagram-clone-sdoa.vercel.app",
@@ -20,7 +20,7 @@ const projectsData = [
   {
     id: 3,
     title: "Portfolio Website",
-    category: "web",
+    category: "Full_Stack",
     description: "A modern, responsive personal portfolio showcasing projects and skills, built with React.js and styled with  CSS.",
     image: "/protofolio.png",
     link: "https://portfolio-eight-azure-cfefgmaj7s.vercel.app",
