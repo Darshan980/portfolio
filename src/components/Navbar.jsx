@@ -31,7 +31,7 @@ function Navbar() {
           </Link>
           <Link
             to="/projects"
-            className={location.pathname === "/projects" ? "active" : ""}
+            className={location.pathname === "/project" ? "active" : ""}
           >
             Projects
           </Link>
