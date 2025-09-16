@@ -14,19 +14,33 @@
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* reserve space immediately */
+/* Fixed image container - increased height and better aspect ratio */
 .project-image-container {
-  aspect-ratio: 16 / 9;  /* prevents flicker */
+  aspect-ratio: 4 / 3;  /* Changed to 4:3 for better image display */
   width: 100%;
   overflow: hidden;
   display: block;
+  background: #f7fafc; /* Fallback background while loading */
+  position: relative;
 }
 
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  display: block; /* prevents inline-gap issues */
+  object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
+  object-position: center; /* Center the image */
+  display: block;
+  transition: opacity 0.3s ease; /* Smooth loading transition */
+}
+
+/* Alternative: If you want images to fill container but might crop */
+.project-image.fill-mode {
+  object-fit: cover; /* Use this class if you prefer cropped but filled images */
+}
+
+/* Loading state to prevent flash */
+.project-image:not([src]) {
+  opacity: 0;
 }
 
 .project-info {
