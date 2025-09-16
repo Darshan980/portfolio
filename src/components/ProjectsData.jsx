@@ -22,7 +22,7 @@ const projectsData = [
     title: "Portfolio Website",
     category: "Full_Stack",
     description: "A modern, responsive personal portfolio showcasing projects and skills, built with React.js and styled with  CSS.",
-    image: "/protofolio.png",
+    image: "/portfolio.png",
     link: "https://portfolio-eight-azure-cfefgmaj7s.vercel.app",
     technologies: [ "React", "CSS", "Vercel"]
   },
