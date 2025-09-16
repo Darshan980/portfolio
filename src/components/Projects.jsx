@@ -52,7 +52,7 @@ function Projects({ showAll = false }) {
 
         {!showAll && (
           <div className="view-more">
-            <a href="/portfolio" className="btn">
+            <a href="/project" className="btn">
               View All Projects
             </a>
           </div>
