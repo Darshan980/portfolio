@@ -11,7 +11,7 @@ const projectsData = [
   {
     id: 2,
     title: "Accident Detection System",
-    category: "ai",
+    category: "Machine_Learning",
     description: "AI-powered computer vision system for detecting traffic accidents using deep learning with custom CNN and transfer learning models.",
     image: "/Accident-detction.png",
     link: "https://accident-prediction-orpin.vercel.app/",
