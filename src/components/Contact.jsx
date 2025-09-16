@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
 import './Contact.css';
+
+// Initialize EmailJS with your public key (using global emailjs from CDN)
+const initializeEmailJS = () => {
+  if (window.emailjs) {
+    window.emailjs.init("NEo9cRk6HHqKNPBUR"); // Your actual public key
+  }
+};
 
 // Simple icon components
 const PhoneIcon = () => (
@@ -28,6 +34,7 @@ const ContactInfo = () => {
   
   useEffect(() => {
     setAnimate(true);
+    initializeEmailJS(); // Initialize EmailJS when component mounts
   }, []);
 
   return (
@@ -68,22 +75,48 @@ const ContactForm = () => {
     setFocused(null);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage({ text: '', type: '' });
     
-    // Simulate form submission with timeout
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage({ 
-        text: 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.', 
-        type: 'success' 
-      });
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      // EmailJS configuration
+      const serviceID = 'service_q5z44r3'; // Your service ID
+      const templateID = 'template_y2stoli'; // Your template ID
       
-      // Clear success message after 5 seconds
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'darshanpoojary980@gmail.com', // Your email
+      };
+
+      const result = await window.emailjs.send(serviceID, templateID, templateParams);
+      
+      if (result.status === 200) {
+        setSubmitMessage({ 
+          text: 'Thank you! Your message has been sent successfully. I\'ll get back to you soon.', 
+          type: 'success' 
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => setSubmitMessage({ text: '', type: '' }), 5000);
+      }
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setSubmitMessage({ 
+        text: 'Sorry, there was an error sending your message. Please try again or contact me directly.', 
+        type: 'error' 
+      });
+      
+      // Clear error message after 5 seconds
       setTimeout(() => setSubmitMessage({ text: '', type: '' }), 5000);
-    }, 1800);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -96,6 +129,13 @@ const ContactForm = () => {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '10px'}}>
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          )}
+          {submitMessage.type === 'error' && (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '10px'}}>
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
             </svg>
           )}
           {submitMessage.text}
