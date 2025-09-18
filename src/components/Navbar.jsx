@@ -25,7 +25,7 @@ function Navbar() {
         <div className="navbar-container">
           {/* Logo */}
           <Link to="/" className="navbar-logo">
-            <span>Dev</span>Portfolio
+            Portfolio
           </Link>
           
           {/* Desktop Menu */}
