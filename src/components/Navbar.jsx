@@ -37,8 +37,8 @@ function Navbar() {
               Home
             </Link>
             <Link 
-              to="/projects" 
-              className={location.pathname === "/projects" ? "active" : ""}
+              to="/project" 
+              className={location.pathname === "/project" ? "active" : ""}
             >
               Projects
             </Link>
@@ -81,8 +81,8 @@ function Navbar() {
             Home
           </Link>
           <Link 
-            to="/projects" 
-            className={location.pathname === "/projects" ? "active" : ""}
+            to="/project" 
+            className={location.pathname === "/project" ? "active" : ""}
             onClick={handleLinkClick}
           >
             Projects
