@@ -11,60 +11,99 @@ function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="navbar-container">
-        {/* Logo */}
-        <Link to="/" className="navbar-logo">
-          <span>Dev</span>Portfolio
-        </Link>
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
-        {/* Desktop Menu */}
-        <div className="navbar-menu">
-          <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+  return (
+    <>
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+        <div className="navbar-container">
+          {/* Logo */}
+          <Link to="/" className="navbar-logo">
+            <span>Dev</span>Portfolio
+          </Link>
+          
+          {/* Desktop Menu */}
+          <div className="navbar-menu">
+            <Link 
+              to="/" 
+              className={location.pathname === "/" ? "active" : ""}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/projects" 
+              className={location.pathname === "/projects" ? "active" : ""}
+            >
+              Projects
+            </Link>
+            <Link 
+              to="/resume" 
+              className={location.pathname === "/resume" ? "active" : ""}
+            >
+              Resume
+            </Link>
+            <Link 
+              to="/contact" 
+              className={location.pathname === "/contact" ? "active" : ""}
+            >
+              Contact
+            </Link>
+          </div>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="navbar-toggle" 
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? "✖" : "☰"}
+          </button>
+        </div>
+        
+        {/* Mobile Overlay */}
+        <div 
+          className={`mobile-overlay ${isOpen ? "open" : ""}`}
+          onClick={() => setIsOpen(false)}
+        ></div>
+        
+        {/* Mobile Menu */}
+        <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+          <Link 
+            to="/" 
+            className={location.pathname === "/" ? "active" : ""}
+            onClick={handleLinkClick}
+          >
             Home
           </Link>
-          <Link
-            to="/project"
-            className={location.pathname === "/project" ? "active" : ""}
+          <Link 
+            to="/projects" 
+            className={location.pathname === "/projects" ? "active" : ""}
+            onClick={handleLinkClick}
           >
             Projects
           </Link>
-          <Link
-            to="/resume"
+          <Link 
+            to="/resume" 
             className={location.pathname === "/resume" ? "active" : ""}
+            onClick={handleLinkClick}
           >
             Resume
           </Link>
-          <Link
-            to="/contact"
+          <Link 
+            to="/contact" 
             className={location.pathname === "/contact" ? "active" : ""}
+            onClick={handleLinkClick}
           >
             Contact
           </Link>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? "✖" : "☰"}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="mobile-menu">
-          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/portfolio" onClick={() => setIsOpen(false)}>Portfolio</Link>
-          <Link to="/resume" onClick={() => setIsOpen(false)}>Resume</Link>
-          <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-        </div>
-      )}
-    </nav>
+      </nav>
+    </>
   );
 }
 
