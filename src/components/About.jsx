@@ -51,7 +51,7 @@ function About() {
           </div>
           {/* Resume Button */}
           {/* Resume Button */}
-          <a href="/Resume.pdf" download="Darshan_S_Resume.pdf" className="about-button">
+          <a href="/RESUME.pdf" download="Darshan_S_Resume.pdf" className="about-button">
              Download Resume
           </a>
         </motion.div>
