@@ -25,7 +25,7 @@ function Resume() {
         <button onClick={() => setPageNumber(pageNumber + 1)} disabled={pageNumber >= numPages}>
           Next
         </button>
-        <a href="/Darshan_S_Resume.pdf" download>Download PDF</a>
+        <a href="/Resume.pdf" download>Download PDF</a>
       </div>
       
       <Document file="/Resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
