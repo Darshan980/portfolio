@@ -25,10 +25,10 @@ function Resume() {
         <button onClick={() => setPageNumber(pageNumber + 1)} disabled={pageNumber >= numPages}>
           Next
         </button>
-        <a href="/Resume.pdf" download>Download PDF</a>
+        <a href="/RESUME.pdf" download>Download PDF</a>
       </div>
       
-      <Document file="/Resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+      <Document file="/RESUME.pdf" onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} width={800} />
       </Document>
     </div>
