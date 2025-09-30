@@ -28,7 +28,7 @@ function Resume() {
         <a href="/RESUME.pdf" download>Download PDF</a>
       </div>
       
-      <Document file="/RESUME.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+      <Document file="/../../public/RESUME.pdf" onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} width={800} />
       </Document>
     </div>
