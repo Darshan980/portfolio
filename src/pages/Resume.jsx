@@ -1,63 +1,57 @@
 import React, { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
 import "./Resume.css";
 
-// Set worker to match react-pdf version
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-
 function Resume() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const [error, setError] = useState(null);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    setError(null);
-  }
-
-  function onDocumentLoadError(error) {
-    console.error('Error loading PDF:', error);
-    setError('Failed to load PDF. Please check if the file exists.');
-  }
+  const [showIframe, setShowIframe] = useState(true);
 
   return (
     <div className="resume-container">
       <div className="pdf-controls">
-        <button 
-          onClick={() => setPageNumber(pageNumber - 1)} 
-          disabled={pageNumber <= 1}
-        >
-          Previous
-        </button>
-        <span>
-          Page {pageNumber || '--'} of {numPages || '--'}
-        </span>
-        <button 
-          onClick={() => setPageNumber(pageNumber + 1)} 
-          disabled={pageNumber >= numPages}
-        >
-          Next
-        </button>
-        <a href="/RESUME.pdf" download="Resume.pdf">
-          Download PDF
-        </a>
+        <h2>My Resume</h2>
+        <div className="button-group">
+          <a 
+            href="/RESUME.pdf" 
+            download="Darshan_Resume.pdf" 
+            className="btn download-btn"
+          >
+            📥 Download PDF
+          </a>
+          <a 
+            href="/RESUME.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn open-btn"
+          >
+            🔗 Open in New Tab
+          </a>
+        </div>
       </div>
       
-      {error && <div className="error-message">{error}</div>}
-      
-      <Document 
-        file="/RESUME.pdf" 
-        onLoadSuccess={onDocumentLoadSuccess}
-        onLoadError={onDocumentLoadError}
-        loading={<div>Loading PDF...</div>}
-      >
-        <Page 
-          pageNumber={pageNumber} 
-          width={Math.min(window.innerWidth * 0.9, 800)}
-          renderTextLayer={true}
-          renderAnnotationLayer={true}
-        />
-      </Document>
+      {showIframe ? (
+        <div className="pdf-viewer">
+          <iframe
+            src="/RESUME.pdf#toolbar=1&navpanes=0&scrollbar=1"
+            title="Resume PDF"
+            onError={() => setShowIframe(false)}
+          />
+        </div>
+      ) : (
+        <div className="fallback-message">
+          <h3>Unable to display PDF</h3>
+          <p>Please download the PDF or open it in a new tab.</p>
+          <a 
+            href="/RESUME.pdf" 
+            download="Darshan_Resume.pdf" 
+            className="btn download-btn"
+          >
+            📥 Download Resume
+          </a>
+        </div>
+      )}
+
+      <div className="resume-note">
+        <p>💡 Tip: Use Ctrl/Cmd + scroll to zoom in the PDF viewer</p>
+      </div>
     </div>
   );
 }
