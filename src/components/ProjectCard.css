@@ -16,31 +16,28 @@
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* Fixed image container - increased height and better aspect ratio */
 .project-image-container {
-  aspect-ratio: 4 / 3;  /* Changed to 4:3 for better image display */
+  aspect-ratio: 4 / 3;
   width: 100%;
   overflow: hidden;
   display: block;
-  background: #f7fafc; /* Fallback background while loading */
+  background: #f7fafc;
   position: relative;
 }
 
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
-  object-position: center; /* Center the image */
+  object-fit: contain;
+  object-position: center;
   display: block;
-  transition: opacity 0.3s ease; /* Smooth loading transition */
+  transition: opacity 0.3s ease;
 }
 
-/* Alternative: If you want images to fill container but might crop */
 .project-image.fill-mode {
-  object-fit: cover; /* Use this class if you prefer cropped but filled images */
+  object-fit: cover;
 }
 
-/* Loading state to prevent flash */
 .project-image:not([src]) {
   opacity: 0;
 }
@@ -67,18 +64,41 @@
   line-height: 1.5;
 }
 
+/* Project Link - Updated to Hero Style */
 .project-link {
   display: inline-block;
-  padding: 8px 14px;
-  border-radius: 12px;
-  background: #dbe7ff;
-  color: #204ecf;
-  font-weight: 500;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #1565c0;
+  color: white;
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
 }
 
 .project-link:hover {
-  background: #204ecf;
-  color: #ffffff;
+  background-color: #0d47a1;
+  transform: scale(1.05);
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(0);
+  transition: transform 0.4s ease-in-out;
+  border-radius: 50%;
+}
+
+.project-link:hover::after {
+  transform: scale(2);
 }
