@@ -31,7 +31,7 @@ function Resume() {
       {showIframe ? (
         <div className="pdf-viewer">
           <iframe
-            src="/RESUME.pdf#toolbar=1&navpanes=0&scrollbar=1"
+            src="/RESUME.pdf#toolbar=1&navpanes=0&scrollbar=1&view=FitH"
             title="Resume PDF"
             onError={() => setShowIframe(false)}
           />
