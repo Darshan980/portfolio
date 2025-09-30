@@ -8,6 +8,7 @@ function Resume() {
     <div className="resume-container">
       <div className="pdf-controls">
         <h2>My Resume</h2>
+        <div className="divider"></div>
         <div className="button-group">
           <a 
             href="/RESUME.pdf" 
