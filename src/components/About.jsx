@@ -50,8 +50,9 @@ function About() {
             <span className="about-stat">Always Learning & Exploring</span>
           </div>
           {/* Resume Button */}
-          <a href="/resume" className="about-button">
-            Download Resume
+          {/* Resume Button */}
+          <a href="/Darshan_S_Resume.pdf" download="Darshan_S_Resume.pdf" className="about-button">
+             Download Resume
           </a>
         </motion.div>
       </div>
